@@ -1,0 +1,15 @@
+{
+    "translation": {
+        "LABEL_INCLUSIVE": "Incluido",
+        "LABEL_DARKMODE": "Modo oscuro",
+        "LABEL_DARKMODE_OS": "Modo oscuro (SO)",
+        "LABEL_FUZZY_SEARCH": "Búsqueda aproximada",
+        "PLACEHOLDER_SEARCH": "Buscar...",
+        "DESC_DATA_LOADING": "Cargando datos...",
+        "Failed to fetch": "Parece que el backend no está disponible en este momento.",
+        "de": "alemán",
+        "en": "inglés",
+        "es": "español",
+        "fr": "francés"
+    }
+}

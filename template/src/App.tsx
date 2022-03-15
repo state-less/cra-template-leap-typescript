@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from '@state-less/react-client';
+import { FunctionComponent, PropsWithChildren } from 'react';
+import { DefaultLayout } from './container/layout';
+import { AnalyticsRoutes } from './container/Routes';
+import { pageDefinitions } from './lib/static';
+import { GOOGLE_ANALYTICS, REACT_SERVER } from './config';
+import { ThemeProvider } from './provider/ThemeProvider';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+/**
+ * Renders all providers used in this app.
+ * @returns
+ */
+const AppProvider: FunctionComponent<
+    PropsWithChildren<Record<string, any>>
+> = ({ children }) => {
+    return <Provider url={REACT_SERVER}>{children}</Provider>;
+};
+
+const App = () => {
+    return (
+        <div>
+            <ThemeProvider darkModeDefault={false} osDefault>
+                <Router>
+                    <AppProvider>
+                        <DefaultLayout>
+                            <AnalyticsRoutes
+                                routes={pageDefinitions}
+                                trackingId={GOOGLE_ANALYTICS}
+                            />
+                        </DefaultLayout>
+                    </AppProvider>
+                </Router>
+            </ThemeProvider>
+        </div>
+    );
+};
 
 export default App;

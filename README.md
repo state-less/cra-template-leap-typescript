@@ -1,11 +1,11 @@
-# cra-template-pwa
+# cra-template-leap-typescript
 
 An progressive web app template for [Create React App](https://github.com/facebook/create-react-app).
 
-To use this template add `--template pwa` when creating a new app:
+To use this template add `--template leap-typescript` when creating a new app:
 
 ```sh
-npx create-react-app my-app --template pwa
+npx create-react-app my-app --template leap-typescript
 ```
 
 ## Learn more

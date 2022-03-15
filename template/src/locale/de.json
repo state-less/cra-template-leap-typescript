@@ -1,0 +1,15 @@
+{
+    "translation": {
+        "LABEL_INCLUSIVE": "Inklusiv",
+        "LABEL_DARKMODE": "Darkmode",
+        "LABEL_DARKMODE_OS": "Darkmode (OS)",
+        "LABEL_FUZZY_SEARCH": "Fuzzy Search",
+        "PLACEHOLDER_SEARCH": "Suchen...",
+        "DESC_DATA_LOADING": "Daten werden geladen...",
+        "Failed to fetch": "Das Backend scheint gerade nicht verfügbar zu sein.",
+        "de": "Deutsch",
+        "en": "Englisch",
+        "es": "Spanisch",
+        "fr": "Französisch"
+    }
+}
