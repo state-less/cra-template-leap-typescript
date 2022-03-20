@@ -1,6 +1,6 @@
 {
   "name": "cra-template-leap-typescript",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "keywords": [
     "react",
     "create-react-app",
@@ -9,7 +9,7 @@
     "workbox",
     "service-worker"
   ],
-  "description": "A progressive web app template for Create React App, using Workbox.",
+  "description": "A progressive web app template for Create React App, using Leap.",
   "main": "template.json",
   "repository": {
     "type": "git",

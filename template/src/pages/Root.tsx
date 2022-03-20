@@ -13,7 +13,7 @@ import { SettingsMenuButton } from './SettingsPage';
 export const RootPage = () => {
     return (
         <div className="flex row sa">
-            <div className="flex col sa">
+            <div className="flex col sa" style={{ height: '100vh' }}>
                 <Container maxWidth="lg">
                     <Card>
                         <CardHeader
@@ -29,7 +29,18 @@ export const RootPage = () => {
                                     documentation
                                 </Link>
                             </Typography>
-                            <Poll name="demo-poll" Component={PollView} />
+                            <h3>Hosted Component</h3>
+                            <Poll
+                                name="demo-poll"
+                                Component={PollView}
+                                host="stateless"
+                            />
+                            <h3>Local Component</h3>
+                            <Poll
+                                name="demo-poll"
+                                Component={PollView}
+                                host="localhost"
+                            />
                         </CardContent>
                     </Card>
                 </Container>

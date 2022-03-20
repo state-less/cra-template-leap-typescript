@@ -5,7 +5,7 @@ import { FunctionComponent, PropsWithChildren } from 'react';
 import { DefaultLayout } from './container/layout';
 import { AnalyticsRoutes } from './container/Routes';
 import { pageDefinitions } from './lib/static';
-import { GOOGLE_ANALYTICS, REACT_SERVER } from './config';
+import { GOOGLE_ANALYTICS, REACT_SERVER, REACT_SERVER_LOCAL } from './config';
 import { ThemeProvider } from './provider/ThemeProvider';
 
 /**
@@ -15,7 +15,16 @@ import { ThemeProvider } from './provider/ThemeProvider';
 const AppProvider: FunctionComponent<
     PropsWithChildren<Record<string, any>>
 > = ({ children }) => {
-    return <Provider url={REACT_SERVER}>{children}</Provider>;
+    return (
+        <Provider
+            hosts={{
+                localhost: REACT_SERVER_LOCAL,
+                stateless: REACT_SERVER,
+            }}
+        >
+            {children}
+        </Provider>
+    );
 };
 
 const App = () => {
