@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import React, { FunctionComponent, useEffect, useMemo, useState } from 'react';
+import React, { FunctionComponent, PropsWithChildren, useEffect, useMemo, useState } from 'react';
 import { Theme } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {
@@ -82,7 +82,7 @@ type ThemeProviderProps = {
     osDefault: boolean;
 };
 
-const ThemeProvider: FunctionComponent<ThemeProviderProps> = (props) => {
+const ThemeProvider: FunctionComponent<PropsWithChildren<ThemeProviderProps>> = (props) => {
     const { children, darkModeDefault = false, osDefault = false } = props;
     const { theme, darkMode, toggleDarkMode, prefersDarkMode, setOsValue, os } =
         useTheme({ darkModeDefault, osDefault });
